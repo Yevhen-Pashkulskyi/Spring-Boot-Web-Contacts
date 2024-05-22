@@ -13,7 +13,7 @@ import java.util.List;
 public class TopContactService {
     @Autowired
     TopContactRepository topContactRepository;
-    public List<TopContact> getAllTopContacts() throws URISyntaxException, IOException {
+    public List<TopContact> getTopContacts() throws URISyntaxException, IOException {
         return topContactRepository.getTopContactList();
     }
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "img": "top_manager.png",
+    "description": "ALex Klinton \n Top manager"
+  },
+  {
+    "id": 2,
+    "img": "top_trader.png",
+    "description": "Bob Tyson \n Top trader"
+  },
+  {
+    "id": 3,
+    "img": "partner_american_bank.png",
+    "description": "Partner American Bank \n Charly Shin"
+  }
+]

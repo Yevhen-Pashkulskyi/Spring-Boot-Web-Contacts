@@ -14,7 +14,7 @@ public class Contact {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id; // why int ?
+    private int id;
     @Column(name = "image")
     private String image;
     @Column(name = "first_name")

@@ -1,6 +1,6 @@
 package com.example.app.SpringBootWebContacts.repository;
 
-import com.example.app.SpringBootWebContacts.entity.TopContact;
+import com.example.app.SpringBootWebContacts.entity.Manager;
 import com.example.app.SpringBootWebContacts.utils.Constants;
 import com.google.gson.Gson;
 
@@ -19,23 +19,23 @@ import java.util.List;
 import java.util.logging.Logger;
 
 @Repository
-public class TopContactRepository {
+public class ManagerRepository {
     private static final Logger LOGGER =
-            Logger.getLogger(TopContactRepository.class.getName());
-    List<TopContact> topContactList;
-    public List<TopContact> getTopContactList() throws IOException {
+            Logger.getLogger(ManagerRepository.class.getName());
+    List<Manager> managerList;
+    public List<Manager> getManagerList() throws IOException {
         File jsonFile = new ClassPathResource(Constants.URL_FILES +
-                Constants.FILE_TOP_CONTACT).getFile();
+                Constants.MANAGER_JSON).getFile();
         String path = jsonFile.getAbsolutePath();
         try{
             Gson gson = new Gson();
             Reader reader = Files.newBufferedReader(Paths.get(path));
-            topContactList = gson.fromJson(reader, new TypeToken<List<TopContact>>() {}.getType());// не зовсім розумію що тут твориться
+            managerList = gson.fromJson(reader, new TypeToken<List<Manager>>() {}.getType());// не зовсім розумію що тут твориться
             reader.close();
-            return topContactList.stream().map(tour -> new TopContact(tour.getId(),
+            return managerList.stream().map(tour -> new Manager(tour.getId(),
                     Constants.URL_IMAGES + tour.getImg(),tour.getDescription())).toList();
         }catch (IOException e){
-            LOGGER.info("TopContactRepository msg" + e.getMessage());
+            LOGGER.info("ManagerRepository msg" + e.getMessage());
             return Collections.emptyList();
         }
     }

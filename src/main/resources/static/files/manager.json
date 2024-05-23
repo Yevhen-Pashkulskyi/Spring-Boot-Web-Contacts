@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "img": "top_manager.png",
+    "description": "ALex Klinton  Top manager"
+  },
+  {
+    "id": 2,
+    "img": "top_trader.jpg",
+    "description": "Bob Tyson  Top trader"
+  },
+  {
+    "id": 3,
+    "img": "patner_american_bank.png",
+    "description": "Partner American Bank  Charly Shin"
+  }
+]

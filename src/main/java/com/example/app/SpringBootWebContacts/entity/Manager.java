@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TopContact {
-    private int id; //why dont Integer?
+public class Manager {
+    private int id;
     private String img;
     private String description;
 }
